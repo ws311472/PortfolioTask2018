@@ -3,6 +3,7 @@
 #include <iostream>
 //Just because I prefer using elif (plus it's quicker)
 #define elif else if 
+#define DriverData "C:/Users/User01/source/repos/PortfolioTask20182/thetrackdriverdata.txt"
 #ifdef _MSC_VER
 #endif
 #define ToUpper(string_data) transform(string_data.begin(), string_data.end(), string_data.begin(), ::toupper);
