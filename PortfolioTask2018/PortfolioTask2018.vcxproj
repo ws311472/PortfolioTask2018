@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="graphic.h" />
+    <ClInclude Include="headers.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
