@@ -32,7 +32,7 @@ bool IsNew(string in);
 
 string sInput(string prompt);
 
-float fInput(string prompt);
+double dInput(string prompt);
 
 int iInput(string prompt);
 

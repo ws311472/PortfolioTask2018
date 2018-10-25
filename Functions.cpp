@@ -178,7 +178,7 @@ string sInput(string prompt)
 	return result;
 }
 
-float fInput(string prompt)
+double dInput(string prompt)
 {
 	string result;
 	cout << "" << endl;
@@ -187,8 +187,8 @@ float fInput(string prompt)
 	cout << " >>>>		";
 	getline(cin, result);
 	cout << "" << endl;
-	float resultf = stof(result, 0);
-	return resultf;
+	double resultd = stod(result, 0);
+	return resultd;
 }
 
 int iInput(string prompt)
