@@ -3,7 +3,12 @@
 #include <iostream>
 //Just because I prefer using elif (plus it's quicker)
 #define elif else if 
-#define DriverData "C:/Users/User01/source/repos/PortfolioTask20182/thetrackdriverdata.txt"
+#define DriverData "thetrackdriverdata.txt"
+//Stores: Driver name, Driver password, Driver ID
+#define TimeData "thetracktimedata.txt"
+//Stores: Driver ID, Track ID, Date, Lap times, Laps
+#define TrackData "thetracktrackdata.txt"
+//Stores: Track ID, Track name, Track data
 #ifdef _MSC_VER
 #endif
 #define ToUpper(string_data) transform(string_data.begin(), string_data.end(), string_data.begin(), ::toupper);
