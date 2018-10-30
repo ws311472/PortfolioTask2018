@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void gotoxy(int x, int y) //Writes over the existing material in the console. Only works if the one that is on the console next is larger than the one before it.
+void gotoxy(int x, int y) // WRITES OVER THE EXISTING MATERIAL IN THE CONSOLE. ONLY WORKS IF THE MATERIAL IN THE CONSOLE NEXT IS LARGER THAN THE ONE BEFORE IT OTHERWISE IT DOESN'T WRITE OVER ALL OF IT, IT LEAVES SECTIONS ON THE SCREEN. AN ALTERNATIVE IS TO USE CLEAR() BUT THAT ISN'T ALWAYS EFFICIENT.
 {
 	COORD topLeft = { x, y };
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -14,7 +14,7 @@ void gotoxy(int x, int y) //Writes over the existing material in the console. On
 	SetConsoleCursorPosition(console, topLeft);
 }
 
-void clear() //Used to be able to clear the console.
+void clear() // CLEARS THE CONSOLE.
 {
 	COORD topLeft = { 0, 0 };
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -32,7 +32,7 @@ void clear() //Used to be able to clear the console.
 	SetConsoleCursorPosition(console, topLeft);
 }
 
-void loading() //Loading graphics function
+void loading() // LOADING GRAPHICS.
 {
 	clear();
 
@@ -85,7 +85,7 @@ void loading() //Loading graphics function
  )" << endl;
 	Sleep(200);
 	system("CLS");
-	cout << R"(                                                                                                                                                
+	cout << R"(                                                                                                                                               
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \  \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \  \ \  \ \  \ \
@@ -98,7 +98,7 @@ void loading() //Loading graphics function
 
 }
 
-void error()
+void error() // FLASHING ERROR GRAPHICS.
 {
 	clear();
 
@@ -123,7 +123,7 @@ void error()
 
 	}
 }
-const string currentDateTime() //Function so that I can call the current time.
+const string currentDateTime() // PRINTS THE CURRENT TIME TO THE SCREEN.
 {
 	time_t     now = time(0);
 	struct tm  tstruct;
@@ -134,7 +134,7 @@ const string currentDateTime() //Function so that I can call the current time.
 	return buf;
 }
 
-bool IsYes(std::string in)
+bool IsYes(std::string in) // THIS IS FOR INCASE THE USER PUTS IN ANYTHING THAT COULD MEAN YES, OTHERWISE THE PROGRAM WOULD RETURN AN ERROR AND THAT WOULD BE INCONVINIENT.
 {
 	ToUpper(in);
 	if (in == "Y" || in == "YES") {
@@ -142,7 +142,7 @@ bool IsYes(std::string in)
 	}
 	return false;
 }
-bool IsNo(std::string in)
+bool IsNo(std::string in) // THIS IS THE SAME FOR NO
 {
 	ToUpper(in);
 	if (in == "N" || in == "NO") {
@@ -150,7 +150,7 @@ bool IsNo(std::string in)
 	}
 	return false;
 }
-bool IsLoad(std::string in)
+bool IsLoad(std::string in) // AND THE SAME FOR LOAD
 {
 	ToUpper(in);
 	if (in == "L" || in == "LOAD") {
@@ -158,7 +158,7 @@ bool IsLoad(std::string in)
 	}
 	return false;
 }
-bool IsNew(std::string in)
+bool IsNew(std::string in) // AND THE SAME FOR NEW
 {
 	ToUpper(in);
 	if (in == "N" || in == "NEW") {
@@ -167,33 +167,33 @@ bool IsNew(std::string in)
 	return false;
 }
 
-string sInput(string prompt)
+string sInput(string prompt) // THIS KEEPS THE FORMAT FOR THE STRING OUTPUT I WANT AND SAVES A LOT OF SPACE IN THE MAIN PROGRAM. 
 {
 	string result;
 	cout << "" << endl;
 	cout << " >>>>		" << prompt << endl;
 	cout << "" << endl;
 	cout << " >>>>		";
-	getline(cin, result);
+	getline(cin, result); // GETLINE ALLOWS THE USER TO INPUT MORE THAN ONE WORD AT A TIME. BEFORE, WITH JUST CIN, IT IGNORED ANY WORDS AFTER THE FIRST SPACE.
 	cout << "" << endl;
 	ToUpper(result);
 
 	return result;
 }
 
-double dInput(string prompt)
+double dInput(string prompt) // THIS IS THE SAME FOR DOUBLES.
 {
 	string result;
 	cout << "" << endl;
 	cout << " >>>>		" << prompt << endl;
 	cout << "" << endl;
 	cout << " >>>>		";
-	getline(cin, result);
-	double resultd = stod(result, 0);
+	getline(cin, result); // READS THE INPUT AS A STRING THEN...
+	double resultd = stod(result, 0); // PARSES STR INTERPRETING ITS CONTENT AS A FLOATING-POINT NUMBER, WHICH IS RETURNED AS A VALUE OF TYPE DOUBLE: STOD = STRING TO DOUBLE. 
 	return resultd;
 }
 
-int iInput(string prompt)
+int iInput(string prompt) // THIS IS THE SAME FOR INTEGERS.
 {
 	string result;
 	cout << "" << endl;
@@ -202,6 +202,6 @@ int iInput(string prompt)
 	cout << " >>>>		";
 	getline(cin, result);
 	cout << "" << endl;
-	int resulti = stoi(result, 0);
+	int resulti = stoi(result, 0); // STOI = STRING TO INTEGER.
 	return resulti;
 }

@@ -1,38 +1,40 @@
 //FUNCTION DECLARATIONS & Macros
 
-#define DriverData "thetrackdriverdata.txt"
+#define DriverData "thetrackdriverdata.txt" // INPUT STORAGE FOR THE DRIVER.
 //Stores: Driver name, Driver password, Driver ID
-#define TimeData "thetracktimedata.txt"
+#define TimeData "thetracktimedata.txt" // INPUT STORAGE FOR THE TRACK.
 //Stores: Driver ID, Track ID, Date, Lap times, Laps
-#define TrackData "thetracktrackdata.txt"
+#define TrackData "thetracktrackdata.txt" // INPUT STORAGE FOR THE TIMES.
 //Stores: Track ID, Track name, Track data
 #ifdef _MSC_VER
 #endif
-#define ToUpper(string_data) transform(string_data.begin(), string_data.end(), string_data.begin(), ::toupper)
+#define ToUpper(string_data) transform(string_data.begin(), string_data.end(), string_data.begin(), ::toupper) // CONVERTS STRINGS TO UPPERCASE FOR RE-READING CONVINIENCE. 
+
+// SEE Functions.cpp FOR FULL FUNCTION IMPLEMENTATION & DESCRIPTIONS.
 
 using namespace std; 
 
-void gotoxy(int x, int y);
+void gotoxy(int x, int y); // WRITE OVER MATERIAL CURRENTLY IN THE CONSOLE.
+ 
+void clear(); // CLEAR THE CONSOLE.
 
-void clear();
+void loading(); // LOADING GRAPHICS.
 
-void loading();
+void error(); // ERROR GRAPHICS.
 
-void error();
+const string currentDateTime(); // PRINTS CURRENT DATE/TIME TO THE SCREEN.
 
-const string currentDateTime(); 
+bool IsYes(string in); // PARAMETERS FOR YES INPUT.
 
-bool IsYes(string in);
+bool IsNo(string in); // PARAMETERS FOR NO INPUT.
 
-bool IsNo(string in);
+bool IsLoad(string in); // PARAMETERS FOR LOAD INPUT.
 
-bool IsLoad(string in);
+bool IsNew(string in); // PARAMETERS FOR NEW INPUT.
 
-bool IsNew(string in);
+string sInput(string prompt); // STRING INPUT/OUTPUT FORMAT.
 
-string sInput(string prompt);
+double dInput(string prompt); // DOUBLE INPUT/OUTPUT FORMAT.
 
-double dInput(string prompt);
-
-int iInput(string prompt);
+int iInput(string prompt); // INTEGER INPUT/OUTPUT FORMAT.
 
