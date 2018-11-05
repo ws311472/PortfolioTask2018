@@ -32,9 +32,15 @@ bool IsLoad(string in); // PARAMETERS FOR LOAD INPUT.
 
 bool IsNew(string in); // PARAMETERS FOR NEW INPUT.
 
+bool IsAdd(string in); // PARAMETERS FOR ADD INPUT.
+
+bool IsUpdate(string in); // PARAMETERS FOR UPDATE INPUT.
+
 string sInput(string prompt); // STRING INPUT/OUTPUT FORMAT.
 
 double dInput(string prompt); // DOUBLE INPUT/OUTPUT FORMAT.
 
 int iInput(string prompt); // INTEGER INPUT/OUTPUT FORMAT.
+
+void privacy();
 
