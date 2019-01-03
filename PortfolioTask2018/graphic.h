@@ -42,5 +42,5 @@ double dInput(string prompt); // DOUBLE INPUT/OUTPUT FORMAT.
 
 int iInput(string prompt); // INTEGER INPUT/OUTPUT FORMAT.
 
-void privacy();
+void privacy(); // PRIVACY STATEMENT DISPLAYED WHEN BOOTED UP
 

@@ -85,7 +85,7 @@ void loading() // LOADING GRAPHICS.
  )" << endl;
 	Sleep(200);
 	system("CLS");
-	cout << R"(                                                                                                                                               
+	cout << R"(                                                                                                                                          
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \  \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \  \ \  \ \  \ \
@@ -106,7 +106,7 @@ void error() // FLASHING ERROR GRAPHICS.
 
 	while (ierror <= 4) {
 
-		std::cout << R"(                              
+		cout << R"(                              
 		 _____ ____  ____   ___  ____  
 		| ____|  _ \|  _ \ / _ \|  _ \ 
 		|  _| | |_) | |_) | | | | |_) |
@@ -222,48 +222,65 @@ int iInput(string prompt) // THIS IS THE SAME FOR INTEGERS.
 	return resulti;
 }
 
-void press_any_key()
+void press_any_key() // PRESS ENTER TO CONTINUE
 {
 	cout << "\n >>>>		Press Enter to Continue...";
 	string temp;
 	getline(std::cin, temp);
 }
 
-void privacy()
+void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 {
 	string yesno = "";
 	bool breakout = true;
 
+	// CHECK WHY THIS DOESN'T WORK BEFORE YOU BOTHER REMOVING IT 
+
 	while (breakout = true) {
 		cout << R"(
 
-					 ____  ____  _____     ___    ______   __  ____ _____  _  _____ _____ __  __ _____ _   _ _____ 
-					|  _ \|  _ \|_ _\ \   / / \  / ___\ \ / / / ___|_   _|/ \|_   _| ____|  \/  | ____| \ | |_   _|
-					| |_) | |_) || | \ \ / / _ \| |    \ V /  \___ \ | | / _ \ | | |  _| | |\/| |  _| |  \| | | |  
-					|  __/|  _ < | |  \ V / ___ | |___  | |    ___) || |/ ___ \| | | |___| |  | | |___| |\  | | |  
-					|_|   |_| \_|___|  \_/_/   \_\____| |_|   |____/ |_/_/   \_|_| |_____|_|  |_|_____|_| \_| |_|  
+								 ____  ____  _____     ___    ______   __  ____ _____  _  _____ _____ __  __ _____ _   _ _____ 
+								|  _ \|  _ \|_ _\ \   / / \  / ___\ \ / / / ___|_   _|/ \|_   _| ____|  \/  | ____| \ | |_   _|
+								| |_) | |_) || | \ \ / / _ \| |    \ V /  \___ \ | | / _ \ | | |  _| | |\/| |  _| |  \| | | |  
+								|  __/|  _ < | |  \ V / ___ | |___  | |    ___) || |/ ___ \| | | |___| |  | | |___| |\  | | |  
+								|_|   |_| \_|___|  \_/_/   \_\____| |_|   |____/ |_/_/   \_|_| |_____|_|  |_|_____|_| \_| |_|  
                                                                                                                                          	
-			THE TRACK Ltd and its related companies (referred to in this document as we, us or our) recognise that your privacy is very important and we are committed to protecting personal information we collect from you. The General Data Protection Act 2018 (Privacy Act), European Union Privacy Principles and registered privacy codes govern the way in which we must mange your personal information. This policy describes how we collect, use, disclose and otherwise manage personal information about you.
+		THE TRACK Ltd and its related companies (referred to in this document as we, us or our) recognise that your privacy is very important and we are committed to protecting personal information we collect from you. 
+		The General Data Protection Act 2018 (Privacy Act), European Union Privacy Principles and registered privacy codes govern the way in which we must mange your personal information. 
+		This policy describes how we collect, use, disclose and otherwise manage personal information about you.
+
 
 		1. Collection of Personal Information
 
-			Types of information collected
-			We may collect and hold personal information about you, that is, information that can identify you, and is relevant to providing you with the services or products you are seeking. This personal information may include details such as your name, age, gender, contact information, products and services you are interested in or require more information about. If you purchase or request products and services from us we may also request your preferences for receiving further marketing or promotional material.
+		Types of information collected:
 
-			The choice of how much information you provide to us is yours. We seek this information either to process your request for information and provide that information to you, to improve the quality of our products and services or to assist you to determine which products and services best meet your needs. 	
+		We may collect and hold personal information about you, that is, information that can identify you, and is relevant to providing you with the services or products you are seeking. 
+		This personal information may include details such as your name, age, gender, contact information,
+		products and services you are interested in or require more information about. 
+		If you purchase or request products and services from us we may also request your preferences for receiving further marketing or promotional material.
+
+		The choice of how much information you provide to us is yours. 
+		We seek this information either to process your request for information and provide that information to you, 
+		to improve the quality of our products and services or to assist you to determine which products and services best meet your needs. 	
+
 
 		2. Method of collection
 	
 
-			Personal information will generally be collected directly from you through the use of any of our standard forms, over the internet, via email, or through a telephone conversation with you. We may also collect personal information about you from third parties acting on your behalf (for instance, agents).
+		Personal information will generally be collected directly from you through the use of any of our standard forms, over the internet, via email, or through a telephone conversation with you. 
+		We may also collect personal information about you from third parties acting on your behalf (for instance, agents).
 
 		3. Security of your information
+
 	
-			We store your personal information in different ways, including in paper and electronic format. We take reasonable steps to ensure the security of all information we collects from risks such as loss or unauthorised access, destruction, use, modification or disclosure of data. For example, your personal information is maintained in a secure environment which can be accessed only by authorised personnel. However, no data transmission over the internet or information stored on servers accessible through the internet can be guaranteed to be fully secure. These activities are undertaken at your risk. 
+		We store your personal information in different ways, including in paper and electronic format. 
+		We take reasonable steps to ensure the security of all information we collects from risks such as loss or unauthorised access, destruction, use, modification or disclosure of data. 
+		For example, your personal information is maintained in a secure environment which can be accessed only by authorised personnel. 
+		However, no data transmission over the internet or information stored on servers accessible through the internet can be guaranteed to be fully secure. These activities are undertaken at your risk. 
 
 		4. Changes to this Privacy Statement
 
-			This privacy policy may change from time to time particularly as new rules, regulations and industry codes are introduced.
+		This privacy policy may change from time to time particularly as new rules, regulations and industry codes are introduced.
 
 
 		                -.            .      .-.
@@ -293,7 +310,7 @@ void privacy()
 
 )" << endl;
 
-		yesno = sInput("Are you happy to contine? [YES/NO]");
+		yesno = sInput("Are you happy to continue? [YES/NO]");
 
 		if (IsYes(yesno)) {
 
