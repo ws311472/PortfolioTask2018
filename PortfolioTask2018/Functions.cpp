@@ -117,7 +117,7 @@ void error() // FLASHING ERROR GRAPHICS.
 
 		Sleep(500);
 		clear();
-		std::cout << "";
+		cout << "";
 		Sleep(100);
 		ierror++;
 
