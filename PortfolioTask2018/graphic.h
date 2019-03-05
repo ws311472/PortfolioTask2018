@@ -8,13 +8,11 @@
 //Stores: Track ID, Track name, Track data
 #ifdef _MSC_VER
 #endif
-#define ToUpper(string_data) transform(string_data.begin(), string_data.end(), string_data.begin(), ::toupper) // CONVERTS STRINGS TO UPPERCASE FOR RE-READING CONVINIENCE. 
+#define ToUpper(string_data) transform(string_data.begin(), string_data.end(), string_data.begin()) // CONVERTS STRINGS TO UPPERCASE FOR RE-READING CONVINIENCE. 
 
 // SEE Functions.cpp FOR FULL FUNCTION IMPLEMENTATION & DESCRIPTIONS.
 
 using namespace std; 
-
-void gotoxy(int x, int y); // WRITE OVER MATERIAL CURRENTLY IN THE CONSOLE.
  
 void clear(); // CLEAR THE CONSOLE.
 

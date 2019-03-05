@@ -6,14 +6,6 @@
 
 using namespace std;
 
-void gotoxy(int x, int y) // WRITES OVER THE EXISTING MATERIAL IN THE CONSOLE. ONLY WORKS IF THE MATERIAL IN THE CONSOLE NEXT IS LARGER THAN THE ONE BEFORE IT OTHERWISE IT DOESN'T WRITE OVER ALL OF IT, IT LEAVES SECTIONS ON THE SCREEN. AN ALTERNATIVE IS TO USE CLEAR() BUT THAT ISN'T ALWAYS EFFICIENT.
-{
-	COORD topLeft = { x, y };
-	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-
-	SetConsoleCursorPosition(console, topLeft);
-}
-
 void clear() // CLEARS THE CONSOLE.
 {
 	COORD topLeft = { 0, 0 };
@@ -44,7 +36,7 @@ void loading() // LOADING GRAPHICS.
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\                   
  )" << endl;
 	Sleep(200);
-	gotoxy(0, 0);
+	clear();
 	cout << R"(
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \ 
@@ -54,7 +46,7 @@ void loading() // LOADING GRAPHICS.
                                                                                        
  )" << endl;
 	Sleep(200);
-	gotoxy(0, 0);
+	clear();
 	cout << R"(
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \ 
@@ -64,7 +56,7 @@ void loading() // LOADING GRAPHICS.
                                                                                                                                                                 
  )" << endl;
 	Sleep(200);
-	gotoxy(0, 0);
+	clear();
 	cout << R"(                                                                                 
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \ 
@@ -74,7 +66,7 @@ void loading() // LOADING GRAPHICS.
                                                                                                                                                                 
  )" << endl;
 	Sleep(200);
-	gotoxy(0, 0);
+	clear();
 	cout << R"(                                                                          
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \  \ \ 
@@ -84,8 +76,8 @@ void loading() // LOADING GRAPHICS.
                                                                                                                                                           
  )" << endl;
 	Sleep(200);
-	system("CLS");
-	cout << R"(                                                                                                                                          
+	clear();
+	cout << R"(                                                                                                                 
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \  \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \  \ \  \ \  \ \
