@@ -18,10 +18,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="graphic.h">
+    <ClInclude Include="headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers.h">
+    <ClInclude Include="Initialise.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
