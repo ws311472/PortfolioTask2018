@@ -8,6 +8,8 @@
 //Stores: Track ID, Track name, Track data
 #ifdef _MSC_VER
 #endif
+#include <iostream>
+#include <chrono>
 
 
 // SEE Functions.cpp FOR FULL FUNCTION IMPLEMENTATION & DESCRIPTIONS.
@@ -32,7 +34,6 @@ bool IsYes(string in); // PARAMETERS FOR YES INPUT.
 
 bool IsNo(string in); // PARAMETERS FOR NO INPUT.
 
-
 bool IsLoad(string in); // PARAMETERS FOR LOAD INPUT.
 
 bool IsNew(string in); // PARAMETERS FOR NEW INPUT.
@@ -54,3 +55,5 @@ void MenuAdd(); // ADD NEW INFORMATION TO THE DATABASE.
 void MenuUpdate(); // UPDATE INFORMATION ALREADY IN THE DATABASE.
 
 void MenuLoad(); // LOAD OLD DATA.
+
+void exit(); // EXIT
