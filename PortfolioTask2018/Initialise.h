@@ -34,6 +34,6 @@
 #include "Menu.h"
 #include "Graphic.h"
 
-using namespace std;
 
 #endif // Initialise_h_
+using namespace std;

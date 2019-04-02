@@ -1,4 +1,3 @@
-//#include "Initialise.h"
 #include "pch.h"
 #include "Input.h"
 #include "IsFunction.h"

@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ErrorCheck.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Initialise.h" />
     <ClInclude Include="Input.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ErrorCheck.cpp" />
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="IsFunction.cpp" />

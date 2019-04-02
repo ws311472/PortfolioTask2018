@@ -1,7 +1,10 @@
 #include "pch.h"
-#include "Initialise.h"
+#include "windows.h"
 #include <string>
+#include <iostream>
 #include <chrono>
+#include "IsFunction.h"
+#include "Input.h"
 
 void clear() // CLEARS THE CONSOLE.
 {
@@ -25,63 +28,63 @@ void loading() // LOADING GRAPHICS.
 {
 	clear();
 
-	cout << R"(
+	std::cout << R"(
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \    
 		| |__| |_| / ___ \| |_| | || |\  | |_| | | |_| / ___ \| |/ ___ \   
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\                   
- )" << endl;
+ )" << std::endl;
 	Sleep(200);
 	clear();
-	cout << R"(
+	std::cout << R"(
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \
 		| |__| |_| / ___ \| |_| | || |\  | |_| | | |_| / ___ \| |/ ___ \    / /
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\  /_/ 
                                                                                        
- )" << endl;
+ )" << std::endl;
 	Sleep(200);
 	clear();
-	cout << R"(
+	std::cout << R"(
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \
 		| |__| |_| / ___ \| |_| | || |\  | |_| | | |_| / ___ \| |/ ___ \    / /  / /
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\  /_/  /_/ 
                                                                                                                                                                 
- )" << endl;
+ )" << std::endl;
 	Sleep(200);
 	clear();
-	cout << R"(                                                                                 
+	std::cout << R"(                                                                                 
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \  \ \
 		| |__| |_| / ___ \| |_| | || |\  | |_| | | |_| / ___ \| |/ ___ \    / /  / /  / /
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\  /_/  /_/  /_/                                                                               
                                                                                                                                                                 
- )" << endl;
+ )" << std::endl;
 	Sleep(200);
 	clear();
-	cout << R"(                                                                          
+	std::cout << R"(                                                                          
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \  \ \  \ \
 		| |__| |_| / ___ \| |_| | || |\  | |_| | | |_| / ___ \| |/ ___ \    / /  / /  / /  / /
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\  /_/  /_/  /_/  /_/ 
                                                                                                                                                           
- )" << endl;
+ )" << std::endl;
 	Sleep(200);
 	clear();
-	cout << R"(                                                                                                                 
+	std::cout << R"(                                                                                                                 
 		 _     ___    _    ____ ___ _   _  ____   ____    _  _____  _      __   __   __   __   __  
 		| |   / _ \  / \  |  _ |_ _| \ | |/ ___| |  _ \  / \|_   _|/ \     \ \  \ \  \ \  \ \  \ \ 
 		| |  | | | |/ _ \ | | | | ||  \| | |  _  | | | |/ _ \ | | / _ \     \ \  \ \  \ \  \ \  \ \
 		| |__| |_| / ___ \| |_| | || |\  | |_| | | |_| / ___ \| |/ ___ \    / /  / /  / /  / /  / /
 		|_____\___/_/   \_|____|___|_| \_|\____| |____/_/   \_|_/_/   \_\  /_/  /_/  /_/  /_/  /_/                       
                                                       
- )" << endl;
+ )" << std::endl;
 	Sleep(200);
 	clear();
 
@@ -95,24 +98,24 @@ void error() // FLASHING ERROR GRAPHICS.
 
 	while (ierror <= 4) {
 
-		cout << R"(                              
+		std::cout << R"(                              
 		 _____ ____  ____   ___  ____  
 		| ____|  _ \|  _ \ / _ \|  _ \ 
 		|  _| | |_) | |_) | | | | |_) |
 		| |___|  _ <|  _ <| |_| |  _ < 
 		|_____|_| \_|_| \_\\___/|_| \_\
                                    			                                    
- )" << endl;
+ )" << std::endl;
 
 		Sleep(500);
 		clear();
-		cout << "";
+		std::cout << "";
 		Sleep(100);
 		ierror++;
 
 	}
 }
-const string currentDateTime() // PRINTS THE CURRENT TIME TO THE SCREEN.
+const std::string currentDateTime() // PRINTS THE CURRENT TIME TO THE SCREEN.
 {
 	time_t     now = time(0);
 	struct tm  tstruct;
@@ -125,20 +128,20 @@ const string currentDateTime() // PRINTS THE CURRENT TIME TO THE SCREEN.
 
 void press_any_key() // PRESS ENTER TO CONTINUE
 {
-	cout << "\n >>>>		Press Enter to Continue...";
-	string temp;
-	getline(cin, temp);
+	std::cout << "\n >>>>		Press Enter to Continue...";
+	std::string temp;
+	std::getline(std::cin, temp);
 }
 
 void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 {
-	string yesno = " ";
+	std::string yesno = " ";
 	bool breakout = true;
 
 	// CHECK WHY THIS DOESN'T WORK BEFORE YOU BOTHER REMOVING IT 
 
 	while (breakout = true) {
-		cout << R"(
+		std::cout << R"(
 
 								 ____  ____  _____     ___    ______   __  ____ _____  _  _____ _____ __  __ _____ _   _ _____ 
 								|  _ \|  _ \|_ _\ \   / / \  / ___\ \ / / / ___|_   _|/ \|_   _| ____|  \/  | ____| \ | |_   _|
@@ -209,7 +212,7 @@ void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 
 
 
-)" << endl;
+)" << std::endl;
 
 		yesno = sInput("Are you happy to continue? [YES/NO]");
 
@@ -221,7 +224,7 @@ void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 		} else if (IsNo(yesno)) {
 
 			clear();
-			cout << R"(
+			std::cout << R"(
 
 					 ____  ____  _____     ___    ______   __  ____ _____  _  _____ _____ __  __ _____ _   _ _____ 
 					|  _ \|  _ \|_ _\ \   / / \  / ___\ \ / / / ___|_   _|/ \|_   _| ____|  \/  | ____| \ | |_   _|
@@ -229,10 +232,10 @@ void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 					|  __/|  _ < | |  \ V / ___ | |___  | |    ___) || |/ ___ \| | | |___| |  | | |___| |\  | | |  
 					|_|   |_| \_|___|  \_/_/   \_\____| |_|   |____/ |_/_/   \_|_| |_____|_|  |_|_____|_| \_| |_|  
 
-)" << endl;
-			cout << " >>>>		If you are not happy with our privacy policy or methods of data collection/storage," << endl;
-			cout << " >>>>		Please contact us on: +44123456789" << endl;
-			cout << " >>>>		or email: thetrack@fakeprivacypolicy.co.uk" << endl;
+)" << std::endl;
+			std::cout << " >>>>		If you are not happy with our privacy policy or methods of data collection/storage," << endl;
+			std::cout << " >>>>		Please contact us on: +44123456789" << endl;
+			std::cout << " >>>>		or email: thetrack@fakeprivacypolicy.co.uk" << endl;
 
 			press_any_key();
 		}
