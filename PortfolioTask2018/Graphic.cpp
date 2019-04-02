@@ -1,9 +1,7 @@
+#include "pch.h"
 #include "Initialise.h"
-
-void ToUpper(std::string& string_data)
-{
-	std::transform(string_data.begin(), string_data.end(), string_data.begin(), [](char c) ->  char { return std::toupper(c); });
-}
+#include <string>
+#include <chrono>
 
 void clear() // CLEARS THE CONSOLE.
 {
@@ -129,12 +127,12 @@ void press_any_key() // PRESS ENTER TO CONTINUE
 {
 	cout << "\n >>>>		Press Enter to Continue...";
 	string temp;
-	getline(std::cin, temp);
+	getline(cin, temp);
 }
 
 void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 {
-	string yesno = "";
+	string yesno = " ";
 	bool breakout = true;
 
 	// CHECK WHY THIS DOESN'T WORK BEFORE YOU BOTHER REMOVING IT 

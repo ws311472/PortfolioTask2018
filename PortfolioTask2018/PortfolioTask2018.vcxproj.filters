@@ -24,14 +24,14 @@
     <ClInclude Include="Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Graphic.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IsFunction.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphic.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

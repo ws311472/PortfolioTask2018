@@ -1,12 +1,24 @@
-#include "Menu.h"
-#include "Initialise.h"
+//#include "Initialise.h"
+#include "pch.h"
 #include "Input.h"
 #include "IsFunction.h"
+#include "Menu.h"
+#include "Graphic.h"
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <numeric>
+#include <windows.h> // WINDOWS-SPECIFIC. CONTAINS DECLARATIONS FOR ALL THE WINDOWS API FUNCTIONS AND MACROS (AND ALL THE DATA TYPES).
+
+#define DriverData "thetrackdriverdata.txt" // INPUT STORAGE FOR THE DRIVER.
+
+using namespace std;
 
 void MenuAdd()
 {
 	//new
-	string sMyFirstName = "", sMyLastName = "", sMyNameStore = "";
+	std::string sMyFirstName = "", sMyLastName = "", sMyNameStore = "";
 
 	clear();
 
@@ -117,8 +129,8 @@ void MenuAdd()
 	cout << "" << endl;
 	cout << " >>>>		At an AVERAGE speed of: " << (dSpeed / 0.44704) << " mph." << endl; // THIS OUTPUTS THE SPEED IN METRES PER SECOND SO IS DIVIDED TO OUTPUT MILES PER HOUR (1MPH = 0.44704 M/S).
 	cout << "" << endl;
-	string(dLap, 'O');
-	cout << " >>>>		NY" << string(dLap, 'O') << "M!" << endl; // JUST WRITES NYOOM - WITH HOWEVER MANY O'S ACCORDING TO HOW MANY LAPS THE PERSON HAS DONE. JUST A BIT OF FUN.
+	
+	cout << " >>>>		NY" << string(static_cast<int>(dLap), 'O') << "M!" << endl; // JUST WRITES NYOOM - WITH HOWEVER MANY O'S ACCORDING TO HOW MANY LAPS THE PERSON HAS DONE. JUST A BIT OF FUN.
 
 
 }

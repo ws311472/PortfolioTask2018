@@ -1,4 +1,6 @@
-#define DriverData "thetrackdriverdata.txt" // INPUT STORAGE FOR THE DRIVER.
+#ifndef Initialise_h_
+#define Initialise_h_
+
 //Stores: Driver name, Driver password, Driver ID
 //#define TimeData "thetracktimedata.txt" // INPUT STORAGE FOR THE TRACK.
 //Stores: Driver ID, Track ID, Date, Lap times, Laps
@@ -30,7 +32,8 @@
 #include "Input.h"
 #include "IsFunction.h"
 #include "Menu.h"
+#include "Graphic.h"
 
 using namespace std;
 
-
+#endif // Initialise_h_

@@ -1,4 +1,7 @@
 #include "Initialise.h"
+#include "pch.h"
+#include <string>
+#include "Input.h"
 
 bool IsYes(std::string in) // THIS IS FOR INCASE THE USER PUTS IN ANYTHING THAT COULD MEAN YES, OTHERWISE THE PROGRAM WOULD RETURN AN ERROR AND THAT WOULD BE INCONVINIENT.
 {

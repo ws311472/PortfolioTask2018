@@ -1,15 +1,20 @@
 #pragma once
-#pragma once
-#include "Initialise.h"
+#ifndef IsFunction_h_
+#define IsFunction_h_
+#include <string>
 
-bool IsYes(string in); // PARAMETERS FOR YES INPUT.
+//#include "Initialise.h"
 
-bool IsNo(string in); // PARAMETERS FOR NO INPUT.
+bool IsYes(std::string in); // PARAMETERS FOR YES INPUT.
 
-bool IsLoad(string in); // PARAMETERS FOR LOAD INPUT.
+bool IsNo(std::string in); // PARAMETERS FOR NO INPUT.
 
-bool IsNew(string in); // PARAMETERS FOR NEW INPUT.
+bool IsLoad(std::string in); // PARAMETERS FOR LOAD INPUT.
 
-bool IsAdd(string in); // PARAMETERS FOR ADD INPUT.
+bool IsNew(std::string in); // PARAMETERS FOR NEW INPUT.
 
-bool IsUpdate(string in); // PARAMETERS FOR UPDATE INPUT.
+bool IsAdd(std::string in); // PARAMETERS FOR ADD INPUT.
+
+bool IsUpdate(std::string in); // PARAMETERS FOR UPDATE INPUT.
+
+#endif // IsFunction_h_

@@ -1,14 +1,22 @@
+//#include "Initialise.h"
+#include "pch.h"
 #include "Input.h"
-#include "Initialise.h"
+#include <algorithm>
 
 using namespace std;
 
-std::string sInput(std::string prompt) // THIS KEEPS THE FORMAT FOR THE STRING OUTPUT I WANT AND SAVES A LOT OF SPACE IN THE MAIN PROGRAM. 
+void ToUpper(std::string& string_data)
 {
-	std::string result;
+	transform(string_data.begin(), string_data.end(), string_data.begin(), [](char c) ->  char { return toupper(c); });
+}
+
+
+string sInput(string prompt) // THIS KEEPS THE FORMAT FOR THE STRING OUTPUT I WANT AND SAVES A LOT OF SPACE IN THE MAIN PROGRAM. 
+{
+	string result;
 	cout << "" << std::endl;
-	cout << " >>>>		" << prompt << std::endl;
-	cout << "" << std::endl;
+	cout << " >>>>		" << prompt << endl;
+	cout << "" << endl;
 	cout << " >>>>		";
 	getline(cin, result); // GETLINE ALLOWS THE USER TO INPUT MORE THAN ONE WORD AT A TIME. BEFORE, WITH JUST CIN, IT IGNORED ANY WORDS AFTER THE FIRST SPACE.
 	cout << "" << endl;
