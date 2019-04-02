@@ -15,6 +15,4 @@ bool IsNew(std::string in); // PARAMETERS FOR NEW INPUT.
 
 bool IsAdd(std::string in); // PARAMETERS FOR ADD INPUT.
 
-bool IsUpdate(std::string in); // PARAMETERS FOR UPDATE INPUT.
-
 #endif // IsFunction_h_

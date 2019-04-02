@@ -233,9 +233,9 @@ void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 					|_|   |_| \_|___|  \_/_/   \_\____| |_|   |____/ |_/_/   \_|_| |_____|_|  |_|_____|_| \_| |_|  
 
 )" << std::endl;
-			std::cout << " >>>>		If you are not happy with our privacy policy or methods of data collection/storage," << endl;
-			std::cout << " >>>>		Please contact us on: +44123456789" << endl;
-			std::cout << " >>>>		or email: thetrack@fakeprivacypolicy.co.uk" << endl;
+			std::cout << " >>>>		If you are not happy with our privacy policy or methods of data collection/storage," << std::endl;
+			std::cout << " >>>>		Please contact us on: +44123456789" << std::endl;
+			std::cout << " >>>>		or email: thetrack@fakeprivacypolicy.co.uk" << std::endl;
 
 			press_any_key();
 		}

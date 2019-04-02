@@ -42,11 +42,3 @@ bool IsAdd(std::string in) // AND THE SAME FOR ADD
 	}
 	return false;
 }
-bool IsUpdate(std::string in) // AND THE SAME FOR UPDATE
-{
-	ToUpper(in);
-	if (in == "U" || in == "UP") {
-		return true;
-	}
-	return false;
-}

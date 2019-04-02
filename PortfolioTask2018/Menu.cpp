@@ -128,7 +128,7 @@ void MenuAdd()
 	cout << "" << endl;
 	cout << " >>>>		At an AVERAGE speed of: " << (dSpeed / 0.44704) << " mph." << endl; // THIS OUTPUTS THE SPEED IN METRES PER SECOND SO IS DIVIDED TO OUTPUT MILES PER HOUR (1MPH = 0.44704 M/S).
 	cout << "" << endl;
-	
+
 	cout << " >>>>		NY" << string(static_cast<int>(dLap), 'O') << "M!" << endl; // JUST WRITES NYOOM - WITH HOWEVER MANY O'S ACCORDING TO HOW MANY LAPS THE PERSON HAS DONE. JUST A BIT OF FUN.
 
 
@@ -186,61 +186,6 @@ void MenuLoad()
 		} else {
 			error();
 		}
-	}
-}
-
-void MenuUpdate()
-{
-	string sMyFirstName = "", sMyLastName = "", sMyNameStore = "", sOption = "";
-	bool bTrue = true;
-
-	clear();
-
-	cout << R"(
-		 _   _ _______        __
-		| \ | | ____\ \      / /
-		|  \| |  _|  \ \ /\ / / 
-		| |\  | |___  \ V  V /  
-		|_| \_|_____|  \_/\_/   
-                        
- )" << endl;
-	sMyFirstName = sInput("What is the FIRST name of the person you're looking for?");
-	while (bTrue == true) {
-		sMyLastName = sInput("What is the LAST name of the person you're looking for?");
-		loading();
-		ifstream input(DriverData); // YOU CAN READ THE INFORMATION FROM A FILE USING AN IFSTREAM OR FSTREAM OBJECT. 
-
-		if (input.is_open()) { // THE is_open() MEMBER FUNCTION CHECKS WHETHER THE FILE IS OPEN AND READY TO BE ACCESSED.
-
-			while (!input.eof()) {
-				string data;
-				getline(input, data); // THE GETLINE FUNCTION READS CHARACTERS FROM AN INPUT STREAM AND PLACES THEM INTO A STRING.
-				cout << " \n " << endl;
-				cout << " >>>>		" << data << endl; // PRINTS IT ALL OUT AT THE MOMENT, NEEDS IT TO ONLY OUTPUT THE CORRESPONDING NAME.
-			}
-			cout << "" << endl;
-			sOption = sInput("Is this the right person you were looking for? [YES/NO]");
-			cout << "" << endl;
-
-			if (IsNo(sOption))
-			{
-				clear();
-				error();
-				cout << "" << endl;
-				cout << " >>>>		It seems we can't find the person you're looking for...Try entering their details again." << endl;
-				Sleep(4000);
-				clear();
-			}
-		} else {
-			error();
-		}
-
-
-		// DISPLAYS AN ERROR IF ANYTHING BUT L/LOAD OR N/NEW IS INPUTTED TO THE WELCOME PAGE. 
-
-		error();
-		cout << "" << endl;
-		cout << " >>>>		User input not recognised..." << endl;
 	}
 }
 

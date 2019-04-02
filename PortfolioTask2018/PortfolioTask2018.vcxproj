@@ -154,7 +154,6 @@
   <ItemGroup>
     <ClInclude Include="ErrorCheck.h" />
     <ClInclude Include="Graphic.h" />
-    <ClInclude Include="Initialise.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="IsFunction.h" />
     <ClInclude Include="Menu.h" />
