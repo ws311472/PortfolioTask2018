@@ -1,10 +1,9 @@
-#include "pch.h"
-#include <cstdio>
-#include <iostream>
-#include "headers.h"
-#include "graphic.h"
+#include "Initialise.h"
 
-using namespace std;
+void ToUpper(std::string& string_data)
+{
+	std::transform(string_data.begin(), string_data.end(), string_data.begin(), [](char c) ->  char { return std::toupper(c); });
+}
 
 void clear() // CLEARS THE CONSOLE.
 {
@@ -124,94 +123,6 @@ const string currentDateTime() // PRINTS THE CURRENT TIME TO THE SCREEN.
 	strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
 
 	return buf;
-}
-
-bool IsYes(std::string in) // THIS IS FOR INCASE THE USER PUTS IN ANYTHING THAT COULD MEAN YES, OTHERWISE THE PROGRAM WOULD RETURN AN ERROR AND THAT WOULD BE INCONVINIENT.
-{
-	ToUpper(in);
-	if (in == "Y" || in == "YES") {
-		return true;
-	}
-	return false;
-}
-bool IsNo(std::string in) // THIS IS THE SAME FOR NO
-{
-	ToUpper(in);
-	if (in == "N" || in == "NO") {
-		return true;
-	}
-	return false;
-}
-bool IsLoad(std::string in) // AND THE SAME FOR LOAD
-{
-	ToUpper(in);
-	if (in == "L" || in == "LOAD") {
-		return true;
-	}
-	return false;
-}
-bool IsNew(std::string in) // AND THE SAME FOR NEW
-{
-	ToUpper(in);
-	if (in == "N" || in == "NEW") {
-		return true;
-	}
-	return false;
-}
-bool IsAdd(std::string in) // AND THE SAME FOR ADD
-{
-	ToUpper(in);
-	if (in == "A" || in == "ADD") {
-		return true;
-	}
-	return false;
-}
-bool IsUpdate(std::string in) // AND THE SAME FOR UPDATE
-{
-	ToUpper(in);
-	if (in == "U" || in == "UPDATE") {
-		return true;
-	}
-	return false;
-}
-
-string sInput(string prompt) // THIS KEEPS THE FORMAT FOR THE STRING OUTPUT I WANT AND SAVES A LOT OF SPACE IN THE MAIN PROGRAM. 
-{
-	string result;
-	cout << "" << endl;
-	cout << " >>>>		" << prompt << endl;
-	cout << "" << endl;
-	cout << " >>>>		";
-	getline(cin, result); // GETLINE ALLOWS THE USER TO INPUT MORE THAN ONE WORD AT A TIME. BEFORE, WITH JUST CIN, IT IGNORED ANY WORDS AFTER THE FIRST SPACE.
-	cout << "" << endl;
-	ToUpper(result);
-
-	return result;
-}
-
-double dInput(string prompt) // THIS IS THE SAME FOR DOUBLES.
-{
-	string result;
-	cout << "" << endl;
-	cout << " >>>>		" << prompt << endl;
-	cout << "" << endl;
-	cout << " >>>>		";
-	getline(cin, result); // READS THE INPUT AS A STRING THEN...
-	double resultd = stod(result, 0); // PARSES STR INTERPRETING ITS CONTENT AS A FLOATING-POINT NUMBER, WHICH IS RETURNED AS A VALUE OF TYPE DOUBLE: STOD = STRING TO DOUBLE. 
-	return resultd;
-}
-
-int iInput(string prompt) // THIS IS THE SAME FOR INTEGERS.
-{
-	string result;
-	cout << "" << endl;
-	cout << " >>>>		" << prompt << endl;
-	cout << "" << endl;
-	cout << " >>>>		";
-	getline(cin, result);
-	cout << "" << endl;
-	int resulti = stoi(result, 0); // STOI = STRING TO INTEGER.
-	return resulti;
 }
 
 void press_any_key() // PRESS ENTER TO CONTINUE
