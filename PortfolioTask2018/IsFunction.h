@@ -3,8 +3,6 @@
 #define IsFunction_h_
 #include <string>
 
-//#include "Initialise.h"
-
 bool IsYes(std::string in); // PARAMETERS FOR YES INPUT.
 
 bool IsNo(std::string in); // PARAMETERS FOR NO INPUT.

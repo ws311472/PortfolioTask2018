@@ -5,6 +5,7 @@
 #include <chrono>
 #include "IsFunction.h"
 #include "Input.h"
+#include "Menu.h"
 
 void clear() // CLEARS THE CONSOLE.
 {
@@ -94,9 +95,9 @@ void error() // FLASHING ERROR GRAPHICS.
 {
 	clear();
 
-	int ierror = 0;
+	int iError = 0;
 
-	while (ierror <= 4) {
+	while (iError <= 4) {
 
 		std::cout << R"(                              
 		 _____ ____  ____   ___  ____  
@@ -111,7 +112,7 @@ void error() // FLASHING ERROR GRAPHICS.
 		clear();
 		std::cout << "";
 		Sleep(100);
-		ierror++;
+		iError++;
 
 	}
 }
@@ -133,14 +134,19 @@ void press_any_key() // PRESS ENTER TO CONTINUE
 	std::getline(std::cin, temp);
 }
 
+void press_any_key_to_exit() // PRESS ENTER TO CONTINUE
+{
+	std::cout << "\n >>>>		Press Enter to EXIT...";
+	std::string temp;
+	std::getline(std::cin, temp);
+	exit();
+}
+
 void privacy() // HAVE TO COMPLY WITH THOSE GDPR REGULATIONS....
 {
 	std::string yesno = " ";
-	bool breakout = true;
-
-	// CHECK WHY THIS DOESN'T WORK BEFORE YOU BOTHER REMOVING IT 
-
-	while (breakout = true) {
+	bool bBreakout = true;
+	while (bBreakout = true) {
 		std::cout << R"(
 
 								 ____  ____  _____     ___    ______   __  ____ _____  _  _____ _____ __  __ _____ _   _ _____ 

@@ -45,6 +45,6 @@ int iInput(string prompt) // THIS IS THE SAME FOR INTEGERS.
 	cout << " >>>>		";
 	getline(cin, result);
 	cout << "" << endl;
-	int resulti = stoi(result, 0); // STOI = STRING TO INTEGER.
-	return resulti;
+	int iResult = stoi(result, 0); // STOI = STRING TO INTEGER.
+	return iResult;
 }

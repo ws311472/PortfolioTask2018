@@ -5,7 +5,6 @@
 #include <iostream>
 #include <string>
 
-//#include "Initialise.h"
 std::string sInput(std::string prompt); // STRING INPUT/OUTPUT FORMAT.
 
 double dInput(std::string prompt); // DOUBLE INPUT/OUTPUT FORMAT.

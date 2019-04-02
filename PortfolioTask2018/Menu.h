@@ -8,4 +8,6 @@ void MenuLoad(); // LOAD OLD DATA.
 
 void exit(); // EXIT
 
+void menu_or_exit();
+
 #endif // menu_h_

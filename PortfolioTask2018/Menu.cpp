@@ -88,19 +88,20 @@ void MenuAdd()
 	}
 
 	double dSmallest = INT32_MAX; // THIS IS USED IN A FOR LOOP LATER TO TRY AND FIND THE FASTEST LAPTIME.
+	int NumOfLaps = 0;
 
 	for (auto dTime : dLapMins) {
 		cout << dTime << endl;
 		if (dTime < dSmallest) {
 			dSmallest = dTime;
+			NumOfLaps++;
 		}
 	}
+
 
 	clear();
 
 	double dSum = accumulate(dLapMins.begin(), dLapMins.end(), 0.0); // TOTAL TIME SPENT DRIVING ON THE TRACK, 'ACCUMULATING' FROM THE dLapMins VECTOR.
-
-	// Gotta use a pointer here to find out which lap the fastest laptime was methinks :)
 
 	cout << "" << endl;
 	cout << " " << endl;
@@ -115,8 +116,8 @@ void MenuAdd()
 	if (dSmallest < dOptimumTime) {
 		cout << " >>>>		CONGRATS! You beat the Target Lap Time by " << dOptimumTime - dSmallest << " minute/s :)" << endl;
 		cout << "" << endl;
-
-		//cout << " >>>>		It took you " <<  << " laps to beat the Target Time." << endl;
+		cout << " >>>>		It took you " << NumOfLaps << " lap/s to beat the Target Time." << endl;
+		cout << "" << endl;
 	} else {
 		cout << " >>>>		SORRY, You didn't beat the Target Lap Time by " << dSmallest - dOptimumTime << " minute/s :(" << endl;
 		cout << "" << endl;
@@ -130,12 +131,12 @@ void MenuAdd()
 	cout << "" << endl;
 
 	cout << " >>>>		NY" << string(static_cast<int>(dLap), 'O') << "M!" << endl; // JUST WRITES NYOOM - WITH HOWEVER MANY O'S ACCORDING TO HOW MANY LAPS THE PERSON HAS DONE. JUST A BIT OF FUN.
-
-
+	cout << "" << endl;
 }
 
 void MenuLoad()
 {
+	clear();
 	string sMyFirstName = "", sMyLastName = "", sMyNameStore = "", sOption = "";
 	bool bTrue = true;
 
@@ -151,8 +152,6 @@ void MenuLoad()
 		|_____\___/_/   \_|____/ 
 
  )" << endl;
-
-	// YOU ALSO NEED TO FIGURE OUT WHAT YOU'LL DO IF THE DATABASE IS EMPTY.
 
 	sMyFirstName = sInput("What is the FIRST name of the person you're looking for?");
 	while (bTrue == true) {
@@ -171,8 +170,6 @@ void MenuLoad()
 			cout << "" << endl;
 			sOption = sInput("Is this the right person you were looking for? [YES/NO]");
 			cout << "" << endl;
-
-			// WILL EVENTUALLY OUPUT ALL (UN-EDITABLE) USER INFO HERE, THEN THE LOAD SECTION WILL BE FINISHEDDDDDD
 
 			if (IsNo(sOption))
 			{
@@ -202,4 +199,38 @@ void exit()
 )" << endl;
 	Sleep(300);
 	exit(1);
+}
+
+void menu_or_exit()
+{
+	clear();
+
+	cout << "\n" << endl;
+	cout << " >>>>		Would you like to return to MENU or EXIT [1 or 2]?" << endl;
+	cout << "" << endl;
+	cout << R"( 
+ >>>>		1. MENU
+			
+ >>>>		2. EXIT
+
+ CHOICE = )";
+
+	int MenuExit = 0;
+
+	cin >> MenuExit;
+
+	switch (MenuExit)
+	{
+	case 1:
+	press_any_key();
+	clear();
+	break;
+	case 2:
+	press_any_key_to_exit();
+	break;
+	default:
+	error();
+	break;
+	}
+
 }
